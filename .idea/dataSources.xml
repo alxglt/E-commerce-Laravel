@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="liberty_commerce@localhost" uuid="32c0cd43-42bd-4e84-ae02-e017c11f1c06">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/liberty_commerce</jdbc-url>
+      <time-zone>Europe/Paris</time-zone>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,240 @@
+body {
+    background-image: url("../images/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+    margin: 0px;
+    display:flex;
+    flex-direction:column;
+}
+
+.center {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow:1;
+}
+
+form {
+    font-size: 25px;
+    text-align: center;
+    color: lightyellow;
+}
+
+input {
+    border: 1px solid white;
+    display: inline-block;
+    background-color: hsl(0deg 0% 0% / 54%);
+    color: white;
+}
+
+h1 {
+    color: white; text-shadow: black 0.1em 0.1em 0.2em
+
+}
+
+td {
+    text-align: center;
+}
+
+
+.container {
+
+    padding: 10px;
+    border: 5px solid hsl(204, 88%, 67%);
+    width: 200px;
+    clear: both;
+}
+
+.container input {
+    width: 100%;
+    clear: both;
+}
+
+.boutique {
+    color: lightyellow;
+    font-size: 25px;
+}
+.test {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+section img {
+    height: 300px;
+    width: 300px;
+}
+
+header {
+    background-color: #20034e85;
+    color: white;
+}
+
+.user {
+    text-align: right;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: #20034e85;
+    color: white;
+}
+
+.headertitre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+
+}
+
+a {
+    color:rgb(219, 32, 179);
+    text-decoration: none;
+    font-size: 1.4em;
+}
+a:hover {
+    color: white;
+    text-decoration:none;
+    }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.produit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    text-decoration: none;
+    padding: 9px;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: #1f497d;
+    border: 3px solid #FFFFFF;
+    }
+
+    button:hover {
+    padding: 9px;
+    color: #366092;
+    background-color: #ffffff;
+    border: 3px solid #548dd4;
+    }
+
+
+ul {
+    list-style-type: none;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 5px;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.close {
+    display: flex;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: black;
+}
+
+.centerbis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sucess_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 5px;
+    padding: 20px;
+    background-color: #17ff00;
+    color: white;
+}
+
+.connect_user
+{
+    font-size: 1.4em;
+    color:#d31f5b;
+}
+
+.logout
+{
+    font-size: 1em;
+}
+
+.item
+{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.bouton {
+    font-size: 16px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vignette
+{
+    color: white;
+    font-size: 10px;
+}
+
+.cookie {
+    position: fixed;
+    bottom: 40px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding: 5px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.itemcart {
+    width: 100px ;
+    height: 100px;
+}
