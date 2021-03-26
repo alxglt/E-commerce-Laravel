@@ -11,22 +11,20 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    //
-
+    
+    // Register a user
     public function save(Request $req) {
         $rules = [
             'name' => 'required|string|min:2|max:255',
             'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:2|max:255|confirmed'
         ];
-
         $validator = Validator::make($req->all(),$rules);
         if ($validator->fails()) {
             return redirect('register')
                 ->withErrors($validator)
                 ->withInput();
-        }
-        else {
+        } else {
             $data = $req->input();
                 $user = new user();
                 $user -> name = $data['name'];
@@ -37,6 +35,8 @@ class RegisterController extends Controller
                 ->with('message', 'Your account have been created :) !');
             }
     }
+
+    // See the register view
     public function see() {
         return view('register');
     }

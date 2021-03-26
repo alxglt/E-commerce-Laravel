@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="{{ asset("css/app.css") }}">
     <meta charset="UTF-8">
@@ -8,7 +7,6 @@
 </head>
 @include('header')
 <body>
-
 @if(session()->has('message'))
     <div class="centerbis">
         <div class="sucess_box">
@@ -17,12 +15,10 @@
         </div>
     </div>
 @endif
-
 <main class="center">
     <div class="container">
         <form method="post" action="{{ url('/forgot/reset')  }}">
             {{csrf_field()}}
-
             <label for="email">Mail</label>
             <input type="text" id="mail" name="mail">
             <button type="submit" value="send" name="send"> Send Request </button>
@@ -31,5 +27,4 @@
 </main>
 @include('footer')
 </body>
-
 </html>

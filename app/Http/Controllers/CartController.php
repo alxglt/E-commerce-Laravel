@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\cart;
 use App\Models\item;
 use Illuminate\Http\Request;
@@ -10,36 +9,35 @@ use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
-    public function see()
-    {
+    // To see the panier view
+    public function see() {
         return view('panier');
     }
 
-    function show()
-    {
+    // Show the cart
+    function show() {
         $cart = \Cart::session(auth()->id())->getcontent();
         return view('panier',compact('cart'));
     }
 
-    function delete($item_id)
-    {
+    // Delete an item from the cart
+    function delete($item_id) {
         \Cart::session(auth()->id())->remove($item_id);
         return back();
     }
 
-    function modify($rowid)
-    {
+    // Modify the quantity of an item
+    function modify($rowid) {
         \Cart::session(auth()->id())->update($rowid,[
             'quantity' => array(
                 'relative' => false,
                 'value' => request('quantity'))
-
         ]);
         return back();
     }
 
-    function add($letest)
-    {
+    // Add the cart into the database, ( test function )
+    function add($letest) {
         dd(letest);
         $items = \Cart::session(auth()->id())->getContent();
         foreach($items as $row) {
@@ -52,10 +50,7 @@ class CartController extends Controller
                     'created_at' => now(),
                 )
             );
-
         }
         return back();
-
-
     }
 }

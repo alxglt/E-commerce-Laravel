@@ -8,16 +8,10 @@
 </head>
 
 <body onload="Display(), test(), LoadTotalItem()">
-
 @include('header')
-
-
 <main class="center" id="main">
     <div>
         <table class="container" id="table">
-
-
-
                 <thead>
                 <tr>
                     <th></th>
@@ -27,23 +21,12 @@
                 </tr>
                 </thead>
                 <tbody id="panier">
-
-
                 </tbody>
-
-
         </table>
         <p class="boutique" id="total"> Total</p>
         <button onclick="checkout()"> Checkout </button>
     </div>
-
-
-
-
 </main>
-
 @include('footer')
 </body>
-
-
 </html>

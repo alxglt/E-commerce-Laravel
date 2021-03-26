@@ -1,17 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-    //
-
-    function add(Request $req)
-    {
+    // Function to add a product to the catalog
+    function add(Request $req) {
         $rules = [
             'pathimage' => 'required|string|min:2',
             'item_title' => 'required|string|max:255',
@@ -21,7 +18,6 @@ class AdminController extends Controller
             'qty' => 'required|integer'
 
         ];
-
         $validator = Validator::make($req->all(),$rules);
         if ($validator->fails()) {
             return redirect('admin')
@@ -42,14 +38,10 @@ class AdminController extends Controller
             return redirect('admin')
                 ->with('message', 'Your item have been added :) !');
         }
-
-
-
-
     }
 
+    // To see the admin view
     public function see() {
         return view('admin');
     }
-
 }
